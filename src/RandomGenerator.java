@@ -52,7 +52,7 @@ public class RandomGenerator extends AnAction {
       @Override
       public void run() {
         for (Caret caret : editor.getCaretModel().getAllCarets()) {
-          EditorDocumentUtils.insertTextAtCaret(caret, UUID.randomUUID().toString());
+          EditorDocumentUtils.insertTextAtCaret(caret, EditorDocumentUtils.toggleUUIDDashes(UUID.randomUUID().toString()));
         }
       }
     };
